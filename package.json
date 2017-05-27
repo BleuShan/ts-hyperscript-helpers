@@ -1,5 +1,5 @@
 {
-  "name": "ts-hyperscript-helper",
+  "name": "ts-hyperscript-helpers",
   "version": "0.0.0-development",
   "description": "A typescript port of HyperScript-helpers",
   "main": "dist/cjs/index.js",
@@ -9,12 +9,12 @@
     "dist",
     "src"
   ],
-  "repository": "http://github.com/bleushan/ts-hypescript-helpers",
-  "bugs": "http://github.com/bleushan/ts-hypescript-helpers/issues",
+  "repository": "http://github.com/bleushan/ts-hyperscript-helpers",
+  "bugs": "http://github.com/bleushan/ts-hyperscript-helpers/issues",
   "keywords": [
     "HyperScript"
   ],
-  "homepage": "http://github.com/bleushan/ts-hypescript-helpers",
+  "homepage": "http://github.com/bleushan/ts-hyperscript-helpers",
   "author": "Philippe Lafontaine <lafontaine.philippe@gmail.com>",
   "contributors": [
     "Bleushan"

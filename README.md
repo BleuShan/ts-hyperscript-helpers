@@ -1,5 +1,7 @@
 ### TS HyperScript-Helpers
 
+[![Build Status](https://travis-ci.org/BleuShan/ts-hyperscript-helpers.svg?branch=master)](https://travis-ci.org/BleuShan/ts-hyperscript-helpers)
+
 #### About
 
 This is a generalized take on [Cycle.js HyperScript-Helpers](1). It uses its logic but it allows

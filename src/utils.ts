@@ -1,4 +1,4 @@
-import {complement, isEmpty, head, both, is, isNil as _isNil, pipe, equals, Variadic} from 'ramda'
+import {complement, isEmpty, head, both, is, isNil as _isNil, pipe, equals} from 'ramda'
 
 export const isValidString = both(is(String), complement(isEmpty))
 export const startsWith = (value: any) => pipe(head, equals(value))

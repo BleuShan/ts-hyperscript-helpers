@@ -43,7 +43,7 @@
   version "7.0.22"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.22.tgz#4593f4d828bdd612929478ea40c67b4f403ca255"
 
-"@types/ramda@github:types/npm-ramda":
+"@types/ramda@github:types/npm-ramda", "@types/ramda@types/npm-ramda":
   version "0.23.0-RC1"
   resolved "https://codeload.github.com/types/npm-ramda/tar.gz/3edaf1ad102a4bcd7507dc8e46772d6e2644afe8"
 

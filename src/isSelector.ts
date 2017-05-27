@@ -1,6 +1,4 @@
-import {complement, isEmpty, either, head, both, is, pipe, equals} from 'ramda'
-
-const isValidString = both(is(String), complement(isEmpty))
-const startsWith = (value: any) => pipe(head, equals(value))
+import {both, either} from 'ramda'
+import {isValidString, startsWith} from './utils'
 
 export default both(isValidString, either(startsWith('.'), startsWith('#')))

@@ -1,8 +1,8 @@
 import {HyperScriptFunction} from './types'
-import nodes from './nodes'
+import createTags from './createTags'
 
-export default function svg<VNodeData, VNode>(h: HyperScriptFunction<VNodeData, VNode>) {
-  return nodes(h)([
+export default function svghh<VNodeData, VNode>(h: HyperScriptFunction<VNodeData, VNode>) {
+  return createTags(h, [
     'a',
     'altGlyph',
     'altGlyphDef',

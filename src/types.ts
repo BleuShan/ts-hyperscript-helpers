@@ -1,3 +1,11 @@
+export type CurriedCreateTagFunction<VNodeData, VNode> =
+  (tagName: string) => HyperScriptFunction<VNodeData, VNode>
+
+export interface CurriedCreateTagsFunction<T extends string, VNodeData, VNode> {
+  (tagNames: T[]): HyperScriptHelperNamespace<T, VNodeData, VNode>
+  (tagNames: T[], rootTag: T): HyperScriptHelperRootTag<T, VNodeData, VNode>
+}
+
 export interface HyperScriptFunction<VNodeData, VNode> {
   (text: string): VNode
   (data: VNodeData): VNode
@@ -10,5 +18,8 @@ export interface HyperScriptFunction<VNodeData, VNode> {
   (): VNode
 }
 
-export type HyperScriptHelper<T extends string, VNodeData, VNode> =
-  HyperScriptFunction<VNodeData, VNode> & {[K in T]: HyperScriptFunction<VNodeData, VNode> }
+export type HyperScriptHelperNamespace<T extends string, VNodeData, VNode> =
+{[K in T]: HyperScriptFunction<VNodeData, VNode>}
+
+export type HyperScriptHelperRootTag<T extends string, VNodeData, VNode> =
+HyperScriptFunction<VNodeData, VNode> & HyperScriptHelperNamespace<T, VNodeData, VNode>

@@ -30,11 +30,14 @@
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "3.5.2",
+    "@types/hyperscript": "0.0.2",
     "@types/mocha": "2.2.41",
     "@types/ramda": "github:types/npm-ramda",
     "chai": "3.5.0",
     "cz-conventional-changelog-emoji": "0.1.0",
-    "jsverify": "0.8.2",
+    "hyperscript": "2.0.2",
+    "jsdom": "11.0.0",
+    "jsverify": "github:jsverify/jsverify",
     "mocha": "3.4.2",
     "rimraf": "2.6.1",
     "semantic-release": "^6.3.6",
@@ -43,7 +46,9 @@
     "typescript": "2.3.3"
   },
   "dependencies": {
-    "ramda": "0.23.0",
+    "ramda": "0.23.0"
+  },
+  "peerDependencies": {
     "tslib": "1.7.1"
   },
   "engines": {

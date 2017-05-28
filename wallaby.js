@@ -5,10 +5,10 @@ module.exports = function (wallaby) {
     },
     files: [
       {pattern: 'src/**/*.ts'},
-      {pattern: 'test/**/*Fixture.ts', instrument: false}
+      {pattern: 'test/**/*.fixture.ts', instrument: false}
     ],
     tests: [
-      {pattern: 'test/**/*Spec.ts'}
+      {pattern: 'test/**/*.spec.ts'}
     ],
     testFramework: 'mocha',
     setup: function () {

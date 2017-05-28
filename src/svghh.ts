@@ -1,7 +1,7 @@
 import {HyperScriptFunction} from './types'
 import createTags from './createTags'
 
-export default function svghh<VNodeData, VNode>(h: HyperScriptFunction<VNodeData, VNode>) {
+export default function svghh<NodeData, Node>(h: HyperScriptFunction<NodeData, Node>) {
   return createTags(h, [
     'a',
     'altGlyph',

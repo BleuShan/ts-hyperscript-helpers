@@ -6,10 +6,10 @@ import {
 import createTag from  './createTag'
 import {isNil} from './utils'
 
-function createTags<T extends string, VNodeData, VNode>(h: HyperScriptFunction<VNodeData, VNode>): CurriedCreateTagsFunction<T, VNodeData, VNode>
-function createTags<T extends string, VNodeData, VNode>(h: HyperScriptFunction<VNodeData, VNode>, tagNames: T[]): HyperScriptHelperNamespace<T, VNodeData, VNode>
-function createTags<T extends string, VNodeData, VNode>(h: HyperScriptFunction<VNodeData, VNode>, tagNames: T[], rootTagName: T): HyperScriptHelperRootTag<T, VNodeData, VNode>
-function createTags<T extends string, VNodeData, VNode>(h: HyperScriptFunction<VNodeData, VNode>, tagNames?: T[], rootTagName?: T) {
+function createTags<T extends string, NodeData, Node>(h: HyperScriptFunction<NodeData, Node>): CurriedCreateTagsFunction<T, NodeData, Node>
+function createTags<T extends string, NodeData, Node>(h: HyperScriptFunction<NodeData, Node>, tagNames: T[]): HyperScriptHelperNamespace<T, NodeData, Node>
+function createTags<T extends string, NodeData, Node>(h: HyperScriptFunction<NodeData, Node>, tagNames: T[], rootTagName: T): HyperScriptHelperRootTag<T, NodeData, Node>
+function createTags<T extends string, NodeData, Node>(h: HyperScriptFunction<NodeData, Node>, tagNames?: T[], rootTagName?: T) {
   const _createTag = createTag(h)
 
   function curriedCreateTags(names: T[], rootName?: T)  {

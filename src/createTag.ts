@@ -3,11 +3,16 @@ import {isEmpty} from 'ramda'
 import {isNil} from './utils'
 import isSelector from './isSelector'
 
-function createTag<NodeData, Node>(h: HyperScriptFunction<NodeData, Node>): CurriedCreateTagFunction<NodeData, Node>
-function createTag<NodeData, Node>(h: HyperScriptFunction<NodeData, Node>, tagName: string): HyperScriptFunction<NodeData, Node>
+function createTag<NodeData, Node>(
+  h: HyperScriptFunction<NodeData, Node>
+): CurriedCreateTagFunction<NodeData, Node>
+function createTag<NodeData, Node>(
+  h: HyperScriptFunction<NodeData, Node>,
+  tagName: string
+): HyperScriptFunction<NodeData, Node>
 function createTag<NodeData, Node>(h: HyperScriptFunction<NodeData, Node>, tagName?: string) {
   function curriedCreateTag(tagName: string): HyperScriptFunction<NodeData, Node> {
-    return function createNode(a?: any, b?: any, ...c: any[]) {
+    return function createNode(a?: any, b?: any, ...c: any[]): Node {
       if (isSelector(a)) {
         const selector = `${tagName}${a}`
 

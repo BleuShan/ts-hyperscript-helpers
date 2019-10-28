@@ -3,8 +3,8 @@ import {nat, Arbitrary} from 'jsverify'
 
 export type ElementTagName = keyof ElementTagNameMap
 
-function makeTagsArbitrary(tags: ElementTagName[]): Arbitrary<ElementTagName>  {
-  return nat(tags.length - 1).smap(n => tags[n], tag => tags.indexOf(tag))
+function makeTagsArbitrary(tags: ElementTagName[]): Arbitrary<ElementTagName> {
+  return nat(tags.length - 1).smap((n) => tags[n], (tag) => tags.indexOf(tag))
 }
 
 export const HTML_TAG_NAMES = [
@@ -158,7 +158,7 @@ export const HTML_TAG_NAMES = [
   'xmp'
 ] as ElementTagName[]
 
-export const SVG_TAG_NAMES =  [
+export const SVG_TAG_NAMES = [
   'a',
   'altGlyph',
   'altGlyphDef',
@@ -237,7 +237,7 @@ export const SVG_TAG_NAMES =  [
   'tspan',
   'use',
   'view',
-  'vkern',
+  'vkern'
 ] as ElementTagName[]
 
 export const HTMLHH_TAG_NAMES = HTML_TAG_NAMES.filter(either(equals('html'), equals('svg')))

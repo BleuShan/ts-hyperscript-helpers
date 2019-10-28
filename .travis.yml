@@ -8,6 +8,11 @@ node_js:
   - '10'
   - '11'
   - '12'
+before_install:
+  - git config credential.helper store
+  - echo "https://bleushan:${GH_TOKEN}@github.com/BleuShan//ts-hyperscript-helpers.git" > ~/.git-credentials
+  - git config --global user.email "lafontaine.philippe@gmail.com"
+  - git config --global user.name "Philippe Lafontaine"
 after_success:
   - npm run semantic-release
 branches:

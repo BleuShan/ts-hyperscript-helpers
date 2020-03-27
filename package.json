@@ -30,10 +30,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/chai": "3.5.2",
-    "@types/hyperscript": "0.0.2",
-    "@types/mocha": "^5.2.7",
-    "@types/ramda": "^0.26.33",
+    "@types/chai": "4.2.11",
+    "@types/hyperscript": "0.0.3",
+    "@types/mocha": "^7.0.2",
+    "@types/ramda": "^0.27.0",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
     "chai": "^4.2.0",
@@ -42,21 +42,21 @@
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "hyperscript": "^2.0.2",
-    "jsdom": "^15.2.0",
+    "jsdom": "^16.2.1",
     "jsverify": "^0.8.4",
-    "mocha": "^6.2.2",
-    "prettier": "^1.18.2",
-    "rimraf": "2.6.1",
-    "semantic-release": "^15.13.28",
-    "typescript": "^3.6.4"
+    "mocha": "^7.1.1",
+    "prettier": "^2.0.2",
+    "rimraf": "3.0.2",
+    "semantic-release": "^17.0.4",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "ramda": "^0.26.1"
+    "ramda": "^0.27.0"
   },
   "peerDependencies": {
     "tslib": "^1.10.0"

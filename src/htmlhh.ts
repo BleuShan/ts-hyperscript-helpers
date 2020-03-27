@@ -150,7 +150,7 @@ export default function htmlhh<NodeData, Node>(h: HyperScriptFunction<NodeData, 
       'var',
       'video',
       'wbr',
-      'xmp'
+      'xmp',
     ],
     'html'
   )

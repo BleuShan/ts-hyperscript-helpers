@@ -2,7 +2,7 @@ import {
   CurriedCreateTagsFunction,
   HyperScriptHelperNamespace,
   HyperScriptHelperRootTag,
-  HyperScriptFunction
+  HyperScriptFunction,
 } from './types'
 import createTag from './createTag'
 import {isNil} from './utils'

@@ -6,12 +6,12 @@ import * as hyperscript from 'hyperscript'
 import {HyperScriptFunction} from '../src/types'
 import createTag from '../src/createTag'
 
-describe('createTag', function() {
-  describe('with hyperscript', function() {
+describe('createTag', function () {
+  describe('with hyperscript', function () {
     const h = (hyperscript as unknown) as HyperScriptFunction<object, Element>
 
-    describe('without currying', function() {
-      property('match the hyperscript call with tag', htmlTag, function(tag) {
+    describe('without currying', function () {
+      property('match the hyperscript call with tag', htmlTag, function (tag) {
         const node = createTag(h, tag)()
         const expectedNode = h(tag)
 
@@ -19,7 +19,7 @@ describe('createTag', function() {
         return true
       })
 
-      property('match the hyperscript call with tag and selector', htmlTag, selector, function(
+      property('match the hyperscript call with tag and selector', htmlTag, selector, function (
         tag,
         sel
       ) {
@@ -31,10 +31,10 @@ describe('createTag', function() {
       })
     })
 
-    describe('currying', function() {
+    describe('currying', function () {
       const createHyperscriptTag = createTag(h)
 
-      property('match the hyperscript call with tag', htmlTag, function(tag) {
+      property('match the hyperscript call with tag', htmlTag, function (tag) {
         const node = createHyperscriptTag(tag)()
         const expectedNode = h(tag)
 
@@ -42,7 +42,7 @@ describe('createTag', function() {
         return true
       })
 
-      property('match the hyperscript call with tag and selector', htmlTag, selector, function(
+      property('match the hyperscript call with tag and selector', htmlTag, selector, function (
         tag,
         sel
       ) {

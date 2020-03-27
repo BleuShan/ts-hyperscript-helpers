@@ -83,7 +83,7 @@ export default function svghh<NodeData, Node>(h: HyperScriptFunction<NodeData, N
       'tspan',
       'use',
       'view',
-      'vkern'
+      'vkern',
     ],
     'svg'
   )

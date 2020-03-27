@@ -1,7 +1,6 @@
 import {HyperScriptFunction, CurriedCreateTagFunction} from './types'
-import {isEmpty} from 'ramda'
-import {isNil} from './utils'
-import isSelector from './isSelector'
+import {isEmpty, isNil} from 'ramda'
+import isSelector from './isClassOrIdSelector'
 
 function createTag<NodeData, Node>(
   h: HyperScriptFunction<NodeData, Node>
@@ -22,10 +21,10 @@ function createTag<NodeData, Node>(h: HyperScriptFunction<NodeData, Node>, tagNa
           return h(selector, b)
         }
 
-        return h(selector, {} as NodeData)
+        return h(selector, {} as any)
       }
 
-      if (!isNil(b) && !isEmpty(c)) {
+      if (typeof a === 'string' && !isNil(b) && !isEmpty(c)) {
         return h(`${tagName}${a}`, b, ...c)
       } else if (!isNil(b)) {
         return h(tagName, a, b)
@@ -33,7 +32,7 @@ function createTag<NodeData, Node>(h: HyperScriptFunction<NodeData, Node>, tagNa
         return h(tagName, a)
       }
 
-      return h(tagName, {} as NodeData)
+      return h(tagName, {} as any)
     }
   }
 

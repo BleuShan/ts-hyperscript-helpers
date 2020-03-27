@@ -5,7 +5,7 @@ import {
   HyperScriptFunction,
 } from './types'
 import createTag from './createTag'
-import {isNil} from './utils'
+import {isNil} from 'ramda'
 
 function createTags<T extends string, NodeData, Node>(
   h: HyperScriptFunction<NodeData, Node>

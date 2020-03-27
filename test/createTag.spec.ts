@@ -2,7 +2,7 @@ import './common.fixture'
 import {htmlTag} from './elements.fixture'
 import {selector} from './selectors.fixture'
 import {property} from 'jsverify'
-import * as hyperscript from 'hyperscript'
+import hyperscript from 'hyperscript'
 import {HyperScriptFunction} from '../src/types'
 import createTag from '../src/createTag'
 
